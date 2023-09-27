@@ -180,7 +180,6 @@
         @media screen and (max-width: 1400px) {
             body {
                 min-width: -webkit-fill-available;
-                /*min-width: fit-content;*/
             }
 
             .firstSection {
@@ -243,14 +242,13 @@
 <body>
     <header>
         <nav>
-            <div class="left">Mi portafolio</div>
+            <div id="nav" class="left">Mi portafolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/home">Inicio</a></li>
-                    <li><a href="/about">Acerca de</a></li>
-                    <li><a href="/services">Servicios</a></li>
-                    <li><a href="/projects">Proyectos</a></li>
-                    <li><a href="/contact">Contacto</a></li>
+                    <li id="nav2"><a href="/index">Inicio</a></li>
+                    <li id="nav3"><a href="/about">Acerca de</a></li>
+                    <li id="nav4"><a href="/projects">Proyectos</a></li>
+                    <li id="nav5"><a href="/contact">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -259,87 +257,132 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                <div>Hola, mi nombre es <span class="purple">Jorge</span>,</div>
-                <div>y soy un programador fullstack</div>
+                <div id="textToTrans">Hola, mi nombre es <span class="purple">Jorge</span>,</div>
+                <div id="textToTrans2">y soy un programador fullstack</div>
                 <span id="element"></span>
+
                 <div class="buttons">
-                    <button class="btn">Encuentra códigos</button>
-                    <button class="btn">Encuentra otros códigos</button>
-                    <button class="btn">Algo misterioso</button>
+                    <button class="btn" id="linkedToGit1">Encuentra códigos</button>
+                    <button class="btn" id="linkedToGit2">Encuentra otros códigos</button>
+                    <script>
+                        const boton = document.getElementById('linkedToGit1');
+                        boton.addEventListener('click', function () {
+                            window.location.href = 'https://github.com/JorgeMRobles';
+                        });
+                        const boton2 = document.getElementById('linkedToGit2');
+                        boton2.addEventListener('click', function () {
+                            window.location.href = 'https://github.com/JorgeMRobles';
+                        });
+                    </script>
+                    <button id="translator" class="btn" onclick="translateText()">Traducir</button>
                 </div>
+
             </div>
             <div class="rightSection">
-                <img src="bg.png" alt=""/>
+                <img src="bg.png" alt="" />
             </div>
         </section>
-        <hr/>
+        <hr />
         <section class="secondSection">
-            <span class="text-gray">Lo que he hecho hasta ahora</span>
-            <h1>Listado de puchurrus CAMBIAR ESTO</h1>
+
+            <span id="listkn" class="text-gray">Conocimiento de este...</span>
+            <h1 id="list1">Listado de lenguajes</h1>
+            <ul>
+                <li><strong>JavaScript</strong></li>
+                <li><strong>Java</strong></li>
+                <li>SQL</li>
+                <li>PL/SQL</li>
+                <li>Visual Basic</li>
+                <li>C#</li>
+                <li>C++</li>
+                <li>C</li>
+                <li>Python</li>
+                <li>PHP</li>
+                <li id="listSub">Los lenguajes de marcado (HTML, XML, XHTML...)</li>
+                <li>Etc.</li>
+            </ul>
+
+            <br>
+            <span id="listkn2" class="text-gray">Conocimiento de...</span>
+            <h1 id="list2">Estos añadidos</h1>
+            <ul>
+                <li id="list2Sub">Node-RED y, por tanto, Node.js</li>
+                <li id="list2Sub2">Git y GitHub</li>
+                <li>ServiceNow</li>
+                <li>WordPress</li>
+                <li id="list2Sub3">Aplicaciones ofimáticas (Word, Excel, Access, PowerPoint...)</li>
+                <li id="list2Sub4">BBBDD relacionales y no relacionales</li>
+                <li>Trello</li>
+                <li>Jira</li>
+            </ul>
+
             <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="developer.png" alt=""/>
+
+                <!-- <div class="vertical">
+                    <img class="image-top" src="developer.png" alt="" />
                     <div class="vertical-title">
-                        HTML 2022-2023
+                        HTML, CSS y JavaScript
                     </div>
                     <div class="vertical-desc">
-                        fgjfjfjfghjfjh jfgh fghjg jfg g jghjfjfgjgfgfhj
-                        ghhgkjkghgjkjkg k hkg kh kghkhgkg, jlhlhjl
-                        gkghkhgkghkhgkgkghkghkhjkghk
+                        Sin texto
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="developer.png" alt=""/>
+                    <img class="image-top" src="developer.png" alt="" />
                     <div class="vertical-title">
-                        HTML 2022-2023
+                        Java
                     </div>
                     <div class="vertical-desc">
-                        fgjfjfjfghjfjh jfgh fghjg jfg g jghjfjfgjgfgfhj
-                        ghhgkjkghgjkjkg k hkg kh kghkhgkg, jlhlhjl
-                        gkghkhgkghkhgkgkghkghkhjkghk
+                        Sin texto
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="developer.png" alt=""/>
+                    <img class="image-top" src="developer.png" alt="" />
                     <div class="vertical-title">
-                        HTML 2022-2023
+                        C/C++ y C#
                     </div>
                     <div class="vertical-desc">
-                        fgjfjfjfghjfjh jfgh fghjg jfg g jghjfjfgjgfgfhj
-                        ghhgkjkghgjkjkg k hkg kh kghkhgkg, jlhlhjl
-                        gkghkhgkghkhgkgkghkghkhjkghk
+                        Sin texto
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="developer.png" alt=""/>
+                    <img class="image-top" src="developer.png" alt="" />
                     <div class="vertical-title">
-                        HTML 2022-2023
+                        Java
                     </div>
                     <div class="vertical-desc">
-                        fgjfjfjfghjfjh jfgh fghjg jfg g jghjfjfgjgfgfhj
-                        ghhgkjkghgjkjkg k hkg kh kghkhgkg, jlhlhjl
-                        gkghkhgkghkhgkgkghkghkhjkghk
+                        Sin texto
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
+        <style>
+            .happy-right {
+                text-align: right;
+                padding-right: 20%;
+            }
+        </style>
+        <div id="textToTransTy" class="happy-right">
+            <p>¡Gracias por pasarte por aquí!</p><br>
+        </div>
+
+
     </main>
     <footer>
         <div class="flex">
             <div class="footer-first">
-                <h3>Portafolio de Jorge</h3>
+                <h3 id="textToTransFooter">Portafolio de Jorge</h3>
             </div>
             <div class="footer-second">
                 <ul>
-                    <li><a href="/home">Inicio</a></li>
-                    <li><a href="/about">Acerca de</a></li>
-                    <li><a href="/services">Servicios</a></li>
-                    <li><a href="/projects">Proyectos</a></li>
-                    <li><a href="/contact">Contacto</a></li>
+                    <li><a id="textToTransFooter4" href="/index">Inicio</a></li>
+                    <li><a id="textToTransFooter5" href="/about">Acerca de</a></li>
+                    <li><a id="textToTransFooter6" href="/projects">Proyectos</a></li>
+                    <li><a id="textToTransFooter7" href="/contact">Contacto</a></li>
                 </ul>
             </div>
-            <div class="footer-rights">
-                Copyright &#169; www.jorgeportafolio.com | Todos los derechos reservados
+            <div id="textToTransFooter2" class="footer-rights">
+                Copyright &#169; jorgemrobles.github.io | Todos los derechos reservados
             </div>
         </div>
     </footer>
@@ -349,6 +392,80 @@
             strings: ['con conocimiento de varios lenguajes', 'con conocimiento de varias tecnologías'],
             typespeed: 27,
         });
+
+        function translateText() {
+            const elementTextNav = document.getElementById('nav');
+            elementTextNav.innerText = 'My portfolio';
+            const elementTextNav2 = document.getElementById('nav2');
+            elementTextNav2.innerText = 'Home';
+            const elementTextNav3 = document.getElementById('nav3');
+            elementTextNav3.innerText = 'About';
+            const elementTextNav4 = document.getElementById('nav4');
+            elementTextNav4.innerText = 'Projects';
+            const elementTextNav5 = document.getElementById('nav5');
+            elementTextNav5.innerText = 'Contact';
+
+            const elementText = document.getElementById('textToTrans');
+            const textChanged = 'Hi, my name is <span class="purple">Jorge</span>,';
+            elementText.innerHTML = textChanged;
+
+            const elementText2 = document.getElementById('textToTrans2');
+            elementText2.innerHTML = 'and I am a fullstack developer';
+
+            const elementTextBtn = document.getElementById('linkedToGit1');
+            elementTextBtn.innerText = 'Find codes';
+            const elementTextBtn2 = document.getElementById('linkedToGit2');
+            elementTextBtn2.innerText = 'Find another codes';
+
+            const elementTextList = document.getElementById('list1');
+            elementTextList.innerText = 'List of languages';
+            const elementTextList2 = document.getElementById('list2');
+            elementTextList2.innerText = 'These additions';
+            const elementTextListKn = document.getElementById('listkn');
+            elementTextListKn.innerText = 'Knowledge of...';
+            const elementTextListKn2 = document.getElementById('listkn2');
+            elementTextListKn2.innerText = 'Knowledge of...';
+
+            const elementTextlistSub = document.getElementById('listSub');
+            elementTextlistSub.innerText = 'The marked languages (HTML, XML, XHTML...)';
+            const elementTextlist2Sub = document.getElementById('list2Sub');
+            elementTextlist2Sub.innerText = 'Node-RED and, therefore, Node.js';
+            const elementTextlist2Sub2 = document.getElementById('list2Sub2');
+            elementTextlist2Sub2.innerText = 'Git and GitHub';
+            const elementTextlist2Sub3 = document.getElementById('list2Sub3');
+            elementTextlist2Sub3.innerText = 'Office applications (Word, Excel, Access, PowerPoint...)';
+            const elementTextlist2Sub4 = document.getElementById('list2Sub4');
+            elementTextlist2Sub4.innerText = 'Relational and no relational databases';
+
+            const elementTextFooter = document.getElementById('textToTransFooter');
+            elementTextFooter.innerHTML = 'Portfolio of Jorge';
+            const elementTextFooter2 = document.getElementById('textToTransFooter2');
+            elementTextFooter2.innerHTML = 'Copyright &#169; jorgemrobles.github.io | All the rights reserved';
+
+            const elementTextFooter4 = document.getElementById('textToTransFooter4');
+            elementTextFooter4.innerText = 'Home';
+            const elementTextFooter5 = document.getElementById('textToTransFooter5');
+            elementTextFooter5.innerText = 'About';
+            const elementTextFooter6 = document.getElementById('textToTransFooter6');
+            elementTextFooter6.innerText = 'Projects';
+            const elementTextFooter7 = document.getElementById('textToTransFooter7');
+            elementTextFooter7.innerText = 'Contact';
+
+            const elementTextTy = document.getElementById('textToTransTy');
+            elementTextTy.innerHTML = 'Thanks for coming here!';
+
+            typed = new Typed('#element', {
+                strings: ['with knowledge of multiple languages', 'with knowledge of various technologies'],
+                typespeed: 17,
+                showCursor: false,
+            });
+
+            document.getElementById('translator').disabled = true;
+            document.getElementById('translator').style.backgroundColor = 'gray';
+            document.getElementById('translator').style.cursor = 'not-allowed';
+            document.getElementById('translator').innerText = 'Translated';
+
+        }
     </script>
 </body>
 
