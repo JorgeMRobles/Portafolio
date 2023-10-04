@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https:/fonts.googleapis.com">
+    <link rel="preconnect" href="https:/fonts.gstatic.com crossorigin">
+    <link rel="preconnect" href="https:/fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>Mi portafolio web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: lavender;
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: rgb(189, 137, 237);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 6vw;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            left: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        footer {
+            background-color: purple;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        .footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        @media screen and (max-width: 1400px) {
+            body {
+                min-width: -webkit-fill-available;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45vw;
+                margin-bottom: 73px;
+            }
+
+            .image-top {
+                top: 133px;
+            }
+        }
+
+
+        /* Estilos para las opciones desplegables de los proyectos */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="nav" class="left">Mi portafolio</div>
+            <div class="right">
+                <ul>
+                    <li id="nav2"><a href="#">Inicio</a></li>
+                    <li id="nav3"><a href="#about">Acerca de</a></li>
+                    <li id="nav4" class="dropdown"><a href="https://github.com/JorgeMRobles" target="_blank" rel="noopener">Proyectos</a>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/JorgeMRobles/SnakeGame" target="_blank" rel="noopener">SnakeGame</a>
+                            <a href="https://github.com/JorgeMRobles/Autoclicker" target="_blank" rel="noopener">Autoclicker</a>
+                            <a href="https://github.com/JorgeMRobles/AnimalQuiz" target="_blank" rel="noopener">AnimalQuiz</a>
+                            <a href="https://github.com/JorgeMRobles/WikipediaScraper" target="_blank" rel="noopener">WikipediaScraper</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+          
+        </section>
+        <section class="secondSection">
+            <p>
+                Esta página web consiste en un portafolio bilingüe que se centra en una experiencia sencilla y eficaz hecho por ti, con un listado de códigos de ejemplo disponibles a través de GitHub si se selecciona el botón de <strong>Encuentra códigos</strong> de <strong>Inicio</strong> o uno de los desplegables del menú superior, donde pone <strong>Proyectos</strong>.
+                <br><br>
+                El contacto conmigo es posible a través de la red por la que se me haya encontrado (LinkedIn, Indeed, etc.) si no se encuentra disponible ningún correo electrónico o teléfono.
+            </p>
+        </section>
+        <style>
+            .happy-right {
+                text-align: right;
+                padding-right: 20%;
+            }
+        </style>
+        <div id="textToTransTy" class="happy-right">
+            <p>¡Gracias por pasarte por aquí!</p><br>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="flex">
+            <div class="footer-first">
+                <h3 id="textToTransFooter">Portafolio de Jorge</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a id="textToTransFooter4" href="#">Inicio</a></li>
+                    <li><a id="textToTransFooter5" href="#about">Acerca de</a></li>
+                </ul>
+            </div>
+            <div id="textToTransFooter2" class="footer-rights">
+                Copyright &#169; jorgemrobles.github.io | Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['con conocimiento de varios lenguajes', 'con conocimiento de varias tecnologías'],
+            typespeed: 27,
+        });
+
+        function translateText() {
+            const elementTextNav = document.getElementById('nav');
+            elementTextNav.innerText = 'My portfolio';
+            const elementTextNav2 = document.getElementById('nav2');
+            elementTextNav2.innerText = 'Home';
+            const elementTextNav3 = document.getElementById('nav3');
+            elementTextNav3.innerText = 'About';
+            const elementTextNav4 = document.getElementById('nav4');
+            elementTextNav4.innerText = 'Projects';
+
+            const elementText = document.getElementById('textToTrans');
+            const textChanged = 'Hi, my name is <span class="purple">Jorge</span>,';
+            elementText.innerHTML = textChanged;
+
+            const elementText2 = document.getElementById('textToTrans2');
+            elementText2.innerHTML = 'and I am a fullstack developer';
+
+            const elementTextBtn = document.getElementById('linkedToGit1');
+            elementTextBtn.innerText = 'Find codes';
+
+            const elementTextFooter = document.getElementById('textToTransFooter');
+            elementTextFooter.innerHTML = 'Portfolio of Jorge';
+            const elementTextFooter2 = document.getElementById('textToTransFooter2');
+            elementTextFooter2.innerHTML = 'Copyright &#169; jorgemrobles.github.io | All the rights reserved';
+
+            const elementTextFooter4 = document.getElementById('textToTransFooter4');
+            elementTextFooter4.innerText = 'Home';
+            const elementTextFooter5 = document.getElementById('textToTransFooter5');
+            elementTextFooter5.innerText = 'About';
+
+            const elementTextTy = document.getElementById('textToTransTy');
+            elementTextTy.innerHTML = 'Thanks for coming here!';
+
+            typed = new Typed('#element', {
+                strings: ['with knowledge of multiple languages', 'with knowledge of various technologies'],
+                typespeed: 17,
+                showCursor: false,
+            });
+
+            document.getElementById('translator').disabled = true;
+            document.getElementById('translator').style.backgroundColor = 'gray';
+            document.getElementById('translator').style.cursor = 'not-allowed';
+            document.getElementById('translator').innerText = 'Translated';
+
+        }
+    </script>
+</body>
+
+</html>
