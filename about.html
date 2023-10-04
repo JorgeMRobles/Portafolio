@@ -274,12 +274,17 @@
                 <ul>
                     <li id="nav2"><a href="https://jorgemrobles.github.io/Portafolio/index.html">Inicio</a></li>
                     <li id="nav3"><a href="https://jorgemrobles.github.io/Portafolio/about.html">Acerca de</a></li>
-                    <li id="nav4" class="dropdown"><a href="https://github.com/JorgeMRobles" target="_blank" rel="noopener">Proyectos</a>
+                    <li id="nav4" class="dropdown"><a href="https://github.com/JorgeMRobles" target="_blank"
+                            rel="noopener">Proyectos</a>
                         <div class="dropdown-content">
-                            <a href="https://github.com/JorgeMRobles/SnakeGame" target="_blank" rel="noopener">SnakeGame</a>
-                            <a href="https://github.com/JorgeMRobles/Autoclicker" target="_blank" rel="noopener">Autoclicker</a>
-                            <a href="https://github.com/JorgeMRobles/AnimalQuiz" target="_blank" rel="noopener">AnimalQuiz</a>
-                            <a href="https://github.com/JorgeMRobles/WikipediaScraper" target="_blank" rel="noopener">WikipediaScraper</a>
+                            <a href="https://github.com/JorgeMRobles/SnakeGame" target="_blank"
+                                rel="noopener">SnakeGame</a>
+                            <a href="https://github.com/JorgeMRobles/Autoclicker" target="_blank"
+                                rel="noopener">Autoclicker</a>
+                            <a href="https://github.com/JorgeMRobles/AnimalQuiz" target="_blank"
+                                rel="noopener">AnimalQuiz</a>
+                            <a href="https://github.com/JorgeMRobles/WikipediaScraper" target="_blank"
+                                rel="noopener">WikipediaScraper</a>
                         </div>
                     </li>
                 </ul>
@@ -289,14 +294,29 @@
 
     <main>
         <section class="firstSection">
-          
+
         </section>
         <section class="secondSection">
-            <p>
-                Esta página web consiste en un portafolio bilingüe que se centra en una experiencia sencilla y eficaz hecho por ti, con un listado de códigos de ejemplo disponibles a través de GitHub si se selecciona el botón de <strong>Encuentra códigos</strong> de <strong>Inicio</strong> o uno de los desplegables del menú superior, donde pone <strong>Proyectos</strong>.
+            <p id="description">
+                Esta página web consiste en un portafolio bilingüe que se centra en una experiencia sencilla y eficaz
+                hecho por mí, con un listado de códigos de ejemplo disponibles a través de GitHub si se selecciona el
+                botón de <strong>Encuentra códigos</strong> de <strong>Inicio</strong> o uno de los desplegables del
+                menú superior, donde pone <strong>Proyectos</strong>.
                 <br><br>
-                El contacto conmigo es posible a través de la red por la que se me haya encontrado (LinkedIn, Indeed, etc.) si no se encuentra disponible ningún correo electrónico o teléfono.
+                El contacto conmigo es posible a través de la red por la que se me haya encontrado (LinkedIn, Indeed,
+                etc.) si no se encuentra disponible ningún correo electrónico o teléfono.
             </p>
+            <div class="leftSection">
+                <br>
+                <a href="https://www.linkedin.com/in/jorge-calvellido-robles-6824591a0"><img src="linkedin.png"
+                        alt="Logo LinkedIn" style="width: 50px; height: 50px;"></a>
+                <!-- <a href="https://www.freepik.es/icono/linkedin_3536505#fromView=search&term=linkedin&page=1&position=0&track=ais&track=ais">Icono de riajulislam</a> -->
+                <p id="description-icon" style="font-size:12px; font-style: italic;">Pulsar este icono lleva a LinkedIn.</p>
+                <div class="buttons">
+                    <button id="translator" class="btn" onclick="translateText()">Traducir</button>
+                </div>
+            </div>
+
         </section>
         <style>
             .happy-right {
@@ -317,8 +337,10 @@
             </div>
             <div class="footer-second">
                 <ul>
-                    <li><a id="textToTransFooter4" href="https://jorgemrobles.github.io/Portafolio/index.html">Inicio</a></li>
-                    <li><a id="textToTransFooter5" href="https://jorgemrobles.github.io/Portafolio/about.html">Acerca de</a></li>
+                    <li><a id="textToTransFooter4"
+                            href="https://jorgemrobles.github.io/Portafolio/index.html">Inicio</a></li>
+                    <li><a id="textToTransFooter5" href="https://jorgemrobles.github.io/Portafolio/about.html">Acerca
+                            de</a></li>
                 </ul>
             </div>
             <div id="textToTransFooter2" class="footer-rights">
@@ -343,15 +365,12 @@
             const elementTextNav4 = document.getElementById('nav4');
             elementTextNav4.innerText = 'Projects';
 
-            const elementText = document.getElementById('textToTrans');
-            const textChanged = 'Hi, my name is <span class="purple">Jorge</span>,';
-            elementText.innerHTML = textChanged;
-
-            const elementText2 = document.getElementById('textToTrans2');
-            elementText2.innerHTML = 'and I am a fullstack developer';
-
-            const elementTextBtn = document.getElementById('linkedToGit1');
-            elementTextBtn.innerText = 'Find codes';
+            const elementDescription = document.getElementById('description');
+            elementDescription.innerHTML = `<p>This website (made from me) consists of a bilingual portfolio that focuses on a simple and effective, with a list of example codes available through GitHub by selecting the <strong>Find codes</strong> button or one of the dropdown options from the top menu, where it says <strong>Projects</strong>.
+            <br><br>
+            Contacting me is possible through the network through which I was found (LinkedIn, Indeed, etc.) if email or telephone are unavailable.</p>`;
+            const elementDescriptionIcon = document.getElementById('description-icon');
+            elementDescriptionIcon.innerText = 'Clicking this icon redirects to LinkedIn.';
 
             const elementTextFooter = document.getElementById('textToTransFooter');
             elementTextFooter.innerHTML = 'Portfolio of Jorge';
@@ -365,12 +384,6 @@
 
             const elementTextTy = document.getElementById('textToTransTy');
             elementTextTy.innerHTML = 'Thanks for coming here!';
-
-            typed = new Typed('#element', {
-                strings: ['with knowledge of multiple languages', 'with knowledge of various technologies'],
-                typespeed: 17,
-                showCursor: false,
-            });
 
             document.getElementById('translator').disabled = true;
             document.getElementById('translator').style.backgroundColor = 'gray';
