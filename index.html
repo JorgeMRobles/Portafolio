@@ -236,6 +236,33 @@
                 top: 133px;
             }
         }
+
+
+        /* Estilos para las opciones desplegables de los proyectos */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 
@@ -245,10 +272,16 @@
             <div id="nav" class="left">Mi portafolio</div>
             <div class="right">
                 <ul>
-                    <li id="nav2"><a href="/index">Inicio</a></li>
-                    <li id="nav3"><a href="/about">Acerca de</a></li>
-                    <li id="nav4"><a href="/projects">Proyectos</a></li>
-                    <li id="nav5"><a href="/contact">Contacto</a></li>
+                    <li id="nav2"><a href="#">Inicio</a></li>
+                    <li id="nav3"><a href="#about">Acerca de</a></li>
+                    <li id="nav4" class="dropdown"><a href="https://github.com/JorgeMRobles" target="_blank" rel="noopener">Proyectos</a>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/JorgeMRobles/SnakeGame" target="_blank" rel="noopener">SnakeGame</a>
+                            <a href="https://github.com/JorgeMRobles/Autoclicker" target="_blank" rel="noopener">Autoclicker</a>
+                            <a href="https://github.com/JorgeMRobles/AnimalQuiz" target="_blank" rel="noopener">AnimalQuiz</a>
+                            <a href="https://github.com/JorgeMRobles/WikipediaScraper" target="_blank" rel="noopener">WikipediaScraper</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -263,15 +296,10 @@
 
                 <div class="buttons">
                     <button class="btn" id="linkedToGit1">Encuentra códigos</button>
-                    <button class="btn" id="linkedToGit2">Encuentra otros códigos</button>
                     <script>
                         const boton = document.getElementById('linkedToGit1');
                         boton.addEventListener('click', function () {
-                            window.location.href = 'https://github.com/JorgeMRobles';
-                        });
-                        const boton2 = document.getElementById('linkedToGit2');
-                        boton2.addEventListener('click', function () {
-                            window.location.href = 'https://github.com/JorgeMRobles';
+                            window.open('https://github.com/JorgeMRobles', '_blank');
                         });
                     </script>
                     <button id="translator" class="btn" onclick="translateText()">Traducir</button>
@@ -314,6 +342,7 @@
                 <li id="list2Sub4">BBBDD relacionales y no relacionales</li>
                 <li>Trello</li>
                 <li>Jira</li>
+                <li id="list2Sub5">Testing unitarios (JUnit y Mockito)</li>
             </ul>
 
             <div class="box">
@@ -375,10 +404,8 @@
             </div>
             <div class="footer-second">
                 <ul>
-                    <li><a id="textToTransFooter4" href="/index">Inicio</a></li>
-                    <li><a id="textToTransFooter5" href="/about">Acerca de</a></li>
-                    <li><a id="textToTransFooter6" href="/projects">Proyectos</a></li>
-                    <li><a id="textToTransFooter7" href="/contact">Contacto</a></li>
+                    <li><a id="textToTransFooter4" href="#">Inicio</a></li>
+                    <li><a id="textToTransFooter5" href="#about">Acerca de</a></li>
                 </ul>
             </div>
             <div id="textToTransFooter2" class="footer-rights">
@@ -402,8 +429,6 @@
             elementTextNav3.innerText = 'About';
             const elementTextNav4 = document.getElementById('nav4');
             elementTextNav4.innerText = 'Projects';
-            const elementTextNav5 = document.getElementById('nav5');
-            elementTextNav5.innerText = 'Contact';
 
             const elementText = document.getElementById('textToTrans');
             const textChanged = 'Hi, my name is <span class="purple">Jorge</span>,';
@@ -414,8 +439,6 @@
 
             const elementTextBtn = document.getElementById('linkedToGit1');
             elementTextBtn.innerText = 'Find codes';
-            const elementTextBtn2 = document.getElementById('linkedToGit2');
-            elementTextBtn2.innerText = 'Find another codes';
 
             const elementTextList = document.getElementById('list1');
             elementTextList.innerText = 'List of languages';
@@ -436,6 +459,8 @@
             elementTextlist2Sub3.innerText = 'Office applications (Word, Excel, Access, PowerPoint...)';
             const elementTextlist2Sub4 = document.getElementById('list2Sub4');
             elementTextlist2Sub4.innerText = 'Relational and no relational databases';
+            const elementTextlist2Sub5 = document.getElementById('list2Sub5');
+            elementTextlist2Sub5.innerText = 'Unit tests (JUnit and Mockito)';
 
             const elementTextFooter = document.getElementById('textToTransFooter');
             elementTextFooter.innerHTML = 'Portfolio of Jorge';
@@ -446,10 +471,6 @@
             elementTextFooter4.innerText = 'Home';
             const elementTextFooter5 = document.getElementById('textToTransFooter5');
             elementTextFooter5.innerText = 'About';
-            const elementTextFooter6 = document.getElementById('textToTransFooter6');
-            elementTextFooter6.innerText = 'Projects';
-            const elementTextFooter7 = document.getElementById('textToTransFooter7');
-            elementTextFooter7.innerText = 'Contact';
 
             const elementTextTy = document.getElementById('textToTransTy');
             elementTextTy.innerHTML = 'Thanks for coming here!';
